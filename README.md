@@ -6,6 +6,8 @@
 - 提供外层class 自定义主题
 
 ### 使用
+- 下载 npm install vue-tools/menu
+- 使用代码
 ```vue
 <template>
     <Menus mode="vertical">
@@ -24,9 +26,9 @@
 <script>
     export default{
         components: {
-            Menus: require('dist/menu.vue'),
-            Item: require('dist/item.vue'),
-            Submenu: require('dist/submenu.vue')
+            Menus: require('menu/dist/menu.vue'),
+            Item: require('menu/dist/item.vue'),
+            Submenu: require('menu/dist/submenu.vue')
         }
     }
 </script>
