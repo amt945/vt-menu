@@ -1,9 +1,9 @@
-.vt-menu {
+.ui-menu {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.vt-menu__item {
+.ui-menu__item {
     display: block;
     color: #a7b1c2;
     padding: 5px 0 5px 20px;
@@ -12,42 +12,42 @@
     background-color: #2f4050;
 }
 
-.vt-menu__item a {
+.ui-menu__item a {
     width: 100%;
     height: 100%;
     display: block;
     color: #a7b1c2;
 }
 
-.vt-menu__title {
+.ui-menu__title {
     padding-right: 10px;
 }
 
-.vt-menu__item a:hover,
-.vt-menu__item--active > a {
+.ui-menu__item a:hover,
+.ui-menu__item--active > a {
     background-color: #293846;
     color: white;
 }
 
-.vt-menu--open,
-.vt-menu--open a,
-.vt-menu--open .vt-menu__item {
+.ui-menu--open,
+.ui-menu--open a,
+.ui-menu--open .ui-menu__item {
     background-color: #293846;
 }
 
-.vt-menu__arrow {
+.ui-menu__arrow {
     position: relative;
     float: right;
 }
 
-.vt-menu__arrow--open {
+.ui-menu__arrow--open {
     transform: rotate(-90deg);
     transform-origin: center center;
 }
 
-.vt-menu__title {
+.ui-menu__title {
     cursor: pointer;
 }
-.vt-menu__children{
+.ui-menu__children{
     transition: all 2s ease-in;
 }

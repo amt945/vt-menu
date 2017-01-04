@@ -1,14 +1,14 @@
 <style src="./style.css"></style>
 <template>
     <li :class="itemClass">
-        <div class="vt-menu__title"
+        <div class="ui-menu__title"
              @click="toggle">
             <slot name="title"></slot>
             <span :class="arrowClass" v-if="arrow">
                 <slot name="arrow"></slot>
             </span>
         </div>
-        <ul v-show="active" class="vt-menu__children">
+        <ul v-show="active" class="ui-menu__children">
             <slot></slot>
         </ul>
     </li>
@@ -42,13 +42,13 @@
                 return this.$slots.default && this.$slots.default.length > 0
             },
             itemClass(){
-                let cls = ['vt-menu__item']
-                this.active && cls.push('vt-menu--open')
+                let cls = ['ui-menu__item']
+                this.active && cls.push('ui-menu--open')
                 return cls
             },
             arrowClass(){
-                let cls = ['vt-menu__arrow']
-                this.active && cls.push('vt-menu__arrow--open')
+                let cls = ['ui-menu__arrow']
+                this.active && cls.push('ui-menu__arrow--open')
                 return cls
             }
         }

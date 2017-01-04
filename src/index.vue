@@ -1,6 +1,6 @@
 <style src="./style.css"></style>
 <template>
-    <ul class="vt-menu" :class="classObj">
+    <ul class="ui-menu" :class="classObj">
         <slot></slot>
     </ul>
 </template>
@@ -19,8 +19,8 @@
         computed: {
             classObj() {
                 return {
-                    'vt-menu--vertical': this.mode == 'vertical',
-                    'vt-menu--horizontal': this.mode == 'horizontal'
+                    'ui-menu--vertical': this.mode == 'vertical',
+                    'ui-menu--horizontal': this.mode == 'horizontal'
                 }
             }
         }
