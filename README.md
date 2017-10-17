@@ -54,7 +54,7 @@ npm install -D vt-menu
 
 ## Interface
 
-暴露组件： Menus, Item, Submenu， 其中 Menus是主体，需要组合使用。请查看上述 [Usage](#Usage)
+暴露组件： Menus, Item, Submenu， 其中 Menus是主体，需要组合使用。请查看上述 [Usage](#usage)
 
 ## Menus
 
