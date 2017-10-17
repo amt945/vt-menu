@@ -1,7 +1,21 @@
 .ui-menu {
     padding-top: 20px;
     padding-bottom: 20px;
+    user-select: none;
 }
+.ui-menu__title {
+    padding-right: 10px;
+    cursor: pointer;
+    line-height: 39px;
+}
+.ui-menu > div{
+    border-bottom: 1px solid #3d4957;
+}
+
+.ui-menu > div:last-child{
+    border-bottom: 0;
+}
+
 
 .ui-menu__item {
     display: block;
@@ -10,18 +24,26 @@
     font-size: 14px;
     line-height: 24px;
     background-color: #2f4050;
+    padding: 0;
 }
-
+.ui-menu__item:last-child {
+    padding-bottom: 20px;
+}
 .ui-menu__item a {
-    width: 100%;
     height: 100%;
     display: block;
     color: #a7b1c2;
 }
 
-.ui-menu__title {
-    padding-right: 10px;
+.ui-menu__item.ui-menu--open > .ui-menu__title{
+    background: #2C3542;
 }
+
+.ui-menu__item > .ui-menu__title:hover{
+    background: #2C3542;
+}
+
+
 
 .ui-menu__item a:hover,
 .ui-menu__item--active > a {
@@ -35,19 +57,47 @@
     background-color: #293846;
 }
 
-.ui-menu__arrow {
-    position: relative;
-    float: right;
-}
-
 .ui-menu__arrow--open {
     transform: rotate(-90deg);
     transform-origin: center center;
 }
 
 .ui-menu__title {
-    cursor: pointer;
+    
 }
 .ui-menu__children{
     transition: all 2s ease-in;
+    padding: 5px 0;
+}
+
+.ui-menu__children > .ui-menu__item{
+    line-height: 30px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+.ui-menu__arrow {
+    position: relative;
+    float: right;
+    display: block;
+    width: 10px;
+}
+
+.ui-menu__arrow:after{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-left:2px solid #eee ;
+    border-bottom:2px solid #eee ;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    transition: all 0.1s ease-in;
+}
+.ui-menu__arrow.ui-menu__arrow--open{
+    transform: rotate(0deg);
+}
+.ui-menu__arrow.ui-menu__arrow--open:after{
+    transform: rotate(-45deg);
 }

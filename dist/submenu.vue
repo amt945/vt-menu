@@ -1,8 +1,7 @@
 <style src="./style.css"></style>
 <template>
     <li :class="itemClass">
-        <div class="ui-menu__title"
-             @click="toggle">
+        <div class="ui-menu__title" @click="toggle">
             <slot name="title"></slot>
             <span :class="arrowClass" v-if="arrow">
                 <slot name="arrow"></slot>
