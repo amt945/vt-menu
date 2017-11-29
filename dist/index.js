@@ -1,8 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
+exports.__esModule = true;
 exports.Submenu = exports.Item = exports.Menus = undefined;
 
 var _index = require('./index.vue');

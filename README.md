@@ -13,7 +13,6 @@
 npm install -D vt-menu
 ```
 
-
 ## Usage
 
 ```example
@@ -29,20 +28,29 @@ npm install -D vt-menu
     <Menus mode="vertical">
         <Submenu open>
             <span slot="title">vue-tools</span>
-            <Item><a href='https://github.com/vue-tools/vue-http'>vue-http</a></Item>
-            <Item><a href='https://github.com/vue-tools/vt-cell'>vt-cell</a></Item>
-            <Item><a href='https://github.com/vue-tools/vt-tabs'>vt-tabs</a></Item>
-            <Item><a href='https://github.com/vue-tools/vt-button'>vt-button</a></Item>
-            <Item><a href='https://github.com/vue-tools/vt-alert'>vt-alert</a></Item>
+            <Item v-for="nav in navs"><a @click.prevent="trigger" :href="nav.url">{{nav.name}}</a></Item>
         </Submenu>
         <Item>
-            <a href="https://github.com/halojs">halojs</a>
+            <a @click.prevent="trigger" href="https://github.com/halojs">halojs</a>
         </Item>
     </Menus>
 </template>
 <script>
     import { Menus, Item, Submenu } from 'vt-menu'
     export default{
+        data: () => ({
+            navs: [
+                { name: 'vue-http', url: 'https://github.com/vue-tools/vue-http'},
+                { name: 'vt-tabs', url: 'https://github.com/vue-tools/vt-tabs'},
+                { name: 'vt-button', url: 'https://github.com/vue-tools/vt-button'},
+                { name: 'vt-cell', url: 'https://github.com/vue-tools/vt-cell'}   
+            ]
+        }),
+        methods: {
+            trigger(e) {
+                alert(e.target.href)
+            }  
+        },
         components: {
             Menus,
             Item,

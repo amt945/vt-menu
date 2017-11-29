@@ -29,9 +29,14 @@
             toggle(){
                 this.active = !this.active
             },
+            /*
+                <submenu>
+                    <submenu></submenu> 
+                </submenu>
+            */
             openParent(){
                 this.toggle()
-                if(this.$parent.openParent) {
+                if(typeof this.$parent.openParent === 'function') {
                     this.$parent.openParent()
                 }
             }

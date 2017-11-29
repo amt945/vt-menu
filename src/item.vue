@@ -12,9 +12,13 @@
             }
         },
         mounted() {
-            if(location.href.indexOf(this.$el.querySelector('a').href) > -1){
+            const athor = this.$el.querySelector('a')
+            // 处理菜单url和location.href匹配展开父菜单
+            if(athor && location.href.indexOf(athor.href) > -1) {
                 this.classObj.push('ui-menu__item--active')
-                this.$parent.openParent()
+                if(typeof this.$parent.openParent === 'function') {
+                    this.$parent.openParent()    
+                }
             }
         }
     }
